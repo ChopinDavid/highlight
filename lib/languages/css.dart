@@ -40,15 +40,15 @@ final css = Mode(
             ])
       ]),
       Mode(
+          className: "css-selector-tag",
+          begin: "[a-zA-Z-][a-zA-Z0-9_-]*",
+          relevance: 0),
+      Mode(
           className: "css-punctuation",
           begin: "[:;,{}]",
           end: ".",
           excludeBegin: false,
           excludeEnd: true),
-      Mode(
-          className: "css-selector-tag",
-          begin: "[a-zA-Z-][a-zA-Z0-9_-]*",
-          relevance: 0),
       Mode(begin: "{", end: "}", illegal: "\\S", contains: [
         C_BLOCK_COMMENT_MODE,
         Mode(
