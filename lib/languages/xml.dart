@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-import '../src/mode.dart';
 import '../src/common_modes.dart';
+import '../src/mode.dart';
 
 final xml = Mode(
     refs: {
@@ -10,14 +10,19 @@ final xml = Mode(
         Mode(className: "xml-attr", begin: "[A-Za-z0-9\\._:-]+", relevance: 0),
         Mode(begin: "=\\s*", relevance: 0, contains: [
           Mode(className: "xml-string", endsParent: true, variants: [
-            Mode(begin: "\"", end: "\"", contains: [Mode(ref: '~contains~3')]),
+            Mode(
+                begin: "\"",
+                end: "\"",
+                contains: [Mode(ref: '~contains~3')],
+                excludeBegin: true,
+                excludeEnd: true),
             Mode(begin: "'", end: "'", contains: [Mode(ref: '~contains~3')]),
             Mode(begin: "[^\\s\"'=<>`]+")
           ])
         ])
       ]),
-      '~contains~3':
-          Mode(className: "xml-symbol", begin: "&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;"),
+      '~contains~3': Mode(
+          className: "xml-symbol", begin: "&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;"),
       '~contains~0~contains~3': Mode(
           begin: "\\(",
           contains: [Mode(ref: '~contains~0~contains~0~contains~0')],
@@ -58,7 +63,7 @@ final xml = Mode(
     contains: [
       Mode(
           className: "xml-meta",
-          begin: "<!",
+          begin: "<![a-z]",
           end: ">",
           relevance: 10,
           contains: [
@@ -67,12 +72,16 @@ final xml = Mode(
             Mode(ref: '~contains~0~contains~2'),
             Mode(ref: '~contains~0~contains~3'),
             Mode(begin: "\\[", end: "\\]", contains: [
-              Mode(className: "xml-meta", begin: "<!", end: ">", contains: [
-                Mode(ref: '~contains~0~contains~0'),
-                Mode(ref: '~contains~0~contains~3'),
-                Mode(ref: '~contains~0~contains~1'),
-                Mode(ref: '~contains~0~contains~2')
-              ])
+              Mode(
+                  className: "xml-meta",
+                  begin: "<![a-z]",
+                  end: ">",
+                  contains: [
+                    Mode(ref: '~contains~0~contains~0'),
+                    Mode(ref: '~contains~0~contains~3'),
+                    Mode(ref: '~contains~0~contains~1'),
+                    Mode(ref: '~contains~0~contains~2')
+                  ])
             ])
           ]),
       Mode(
