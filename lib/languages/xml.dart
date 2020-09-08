@@ -67,7 +67,7 @@ final xml = Mode(
             Mode(ref: '~contains~0~contains~2'),
             Mode(ref: '~contains~0~contains~3'),
             Mode(begin: "\\[", end: "\\]", contains: [
-              Mode(className: "xml-meta", begin: "<![a-z]", end: ">", contains: [
+              Mode(className: "xml-meta", begin: "<!", end: ">", contains: [
                 Mode(ref: '~contains~0~contains~0'),
                 Mode(ref: '~contains~0~contains~3'),
                 Mode(ref: '~contains~0~contains~1'),
