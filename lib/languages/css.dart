@@ -40,6 +40,12 @@ final css = Mode(
             ])
       ]),
       Mode(
+          className: "css-punctuation",
+          begin: "[:;,{}]",
+          end: ".",
+          excludeBegin: false,
+          excludeEnd: true),
+      Mode(
           className: "css-selector-tag",
           begin: "[a-zA-Z-][a-zA-Z0-9_-]*",
           relevance: 0),
@@ -75,10 +81,4 @@ final css = Mode(
                   ]))
             ])
       ]),
-      Mode(
-          className: "css-punctuation",
-          begin: "[:;,{}]",
-          end: ".",
-          excludeBegin: false,
-          excludeEnd: true),
     ]);
