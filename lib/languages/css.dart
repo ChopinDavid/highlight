@@ -10,7 +10,11 @@ final css = Mode(
     contains: [
       C_BLOCK_COMMENT_MODE,
       Mode(
-          className: "css-punctuation", begin: "[:;,{}]", endSameAsBegin: true),
+          className: "css-punctuation",
+          begin: "[:;,{}]",
+          end: ".",
+          excludeBegin: false,
+          excludeEnd: true),
       Mode(className: "css-selector-id", begin: "#[A-Za-z0-9_-]+"),
       Mode(className: "css-selector-class", begin: "\\.[A-Za-z0-9_-]+"),
       Mode(
