@@ -125,7 +125,7 @@ final javascript = Mode(refs: {
             returnBegin: true,
             end: "\\s*=>",
             contains: [
-              Mode(className: "js-params", variants: [
+              Mode(className: "js-params", illegal: ',', variants: [
                 Mode(begin: "[A-Za-z\$_][0-9A-Za-z\$_]*"),
                 Mode(begin: "\\(\\s*\\)"),
                 Mode(
@@ -182,6 +182,7 @@ final javascript = Mode(refs: {
             relevance: 0),
         Mode(
             className: "js-params",
+            illegal: ',',
             begin: "\\(",
             end: "\\)",
             excludeBegin: true,
