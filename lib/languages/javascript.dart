@@ -78,8 +78,8 @@ final javascript = Mode(refs: {
   C_LINE_COMMENT_MODE,
   Mode(
       className: 'js-call',
-      begin: " [a-z1-9_-]",
-      end: "\\(",
+      begin: " [a-z1-9_-](",
+      end: "\\)",
       excludeBegin: false),
   Mode(
       className: "js-comment",
