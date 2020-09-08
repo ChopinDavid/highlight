@@ -58,7 +58,7 @@ final xml = Mode(
     contains: [
       Mode(
           className: "xml-meta",
-          begin: "<![a-z]",
+          begin: "<!",
           end: ">",
           relevance: 10,
           contains: [
