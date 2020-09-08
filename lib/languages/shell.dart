@@ -17,6 +17,6 @@ final shell = Mode(refs: {}, aliases: [
   ),
   Mode(
       className: "shell-meta",
-      begin: "^\\s{0,3}[/\\w\\d\\[\\]()@-]*[>%\$]",
+      begin: "^\\s{0,3}[/\\w\\d\\[\\]()@-]*[>%\$#]",
       starts: Mode(end: "\$", subLanguage: ["bash"])),
 ]);
