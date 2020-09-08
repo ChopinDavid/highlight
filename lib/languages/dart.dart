@@ -7,7 +7,7 @@ final dart = Mode(refs: {
   '~contains~0~variants~4~contains~2': Mode(
       className: "dart-subst",
       variants: [Mode(begin: "\\\${", end: "}")],
-      keywords: "true false null this new super",
+      keywords: "true false null this is new super",
       contains: [C_NUMBER_MODE, Mode(ref: '~contains~0')]),
   '~contains~0~variants~4~contains~1': Mode(
       className: "dart-subst", variants: [Mode(begin: "\\\$[A-Za-z0-9_]+")]),
