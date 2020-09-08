@@ -76,6 +76,7 @@ final javascript = Mode(refs: {
   Mode(ref: '~contains~4~starts~contains~1~contains~3'),
   Mode(ref: '~contains~4~starts~contains~1~contains~4'),
   C_LINE_COMMENT_MODE,
+  Mode(className: 'js-call', begin: "[a-z1-9_-](", end: ")"),
   Mode(
       className: "js-comment",
       begin: "/\\*\\*",
