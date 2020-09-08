@@ -151,8 +151,6 @@ final javascript = Mode(refs: {
                       C_BLOCK_COMMENT_MODE,
                       C_LINE_COMMENT_MODE
                     ])
-              ], contains: [
-                Mode(begin: ",", endSameAsBegin: true),
               ])
             ]),
         Mode(className: "", begin: "\\s", end: "\\s*", skip: true),
@@ -195,7 +193,6 @@ final javascript = Mode(refs: {
               Mode(ref: '~contains~4~starts~contains~1~contains~3'),
               Mode(ref: '~contains~4~starts~contains~1~contains~4'),
               Mode(ref: '~contains~4~starts~contains~1~contains~5'),
-              Mode(begin: ",", endSameAsBegin: true),
               REGEXP_MODE,
               C_BLOCK_COMMENT_MODE,
               C_LINE_COMMENT_MODE
