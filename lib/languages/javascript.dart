@@ -125,7 +125,7 @@ final javascript = Mode(refs: {
             returnBegin: true,
             end: "\\s*=>",
             contains: [
-              Mode(className: "js-params", illegal: "\\,", variants: [
+              Mode(className: "js-params", variants: [
                 Mode(begin: "[A-Za-z\$_][0-9A-Za-z\$_]*"),
                 Mode(begin: "\\(\\s*\\)"),
                 Mode(
@@ -151,6 +151,8 @@ final javascript = Mode(refs: {
                       C_BLOCK_COMMENT_MODE,
                       C_LINE_COMMENT_MODE
                     ])
+              ], contains: [
+                Mode(begin: ",", endSameAsBegin: true),
               ])
             ]),
         Mode(className: "", begin: "\\s", end: "\\s*", skip: true),
@@ -182,7 +184,6 @@ final javascript = Mode(refs: {
             relevance: 0),
         Mode(
             className: "js-params",
-            illegal: "\\,",
             begin: "\\(",
             end: "\\)",
             excludeBegin: true,
@@ -194,6 +195,7 @@ final javascript = Mode(refs: {
               Mode(ref: '~contains~4~starts~contains~1~contains~3'),
               Mode(ref: '~contains~4~starts~contains~1~contains~4'),
               Mode(ref: '~contains~4~starts~contains~1~contains~5'),
+              Mode(begin: ",", endSameAsBegin: true),
               REGEXP_MODE,
               C_BLOCK_COMMENT_MODE,
               C_LINE_COMMENT_MODE
