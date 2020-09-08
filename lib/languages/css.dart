@@ -75,6 +75,5 @@ final css = Mode(
                   ]))
             ])
       ]),
-      Mode(
-          className: "css-punctuation", begin: "[:;,{}]", endSameAsBegin: true),
+      Mode(className: "css-punctuation", begin: "[:;,{}]"),
     ]);
