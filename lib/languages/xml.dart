@@ -10,12 +10,7 @@ final xml = Mode(
         Mode(className: "xml-attr", begin: "[A-Za-z0-9\\._:-]+", relevance: 0),
         Mode(begin: "=\\s*", relevance: 0, contains: [
           Mode(className: "xml-string", endsParent: true, variants: [
-            Mode(
-                begin: "\"",
-                end: "\"",
-                contains: [Mode(ref: '~contains~3')],
-                excludeBegin: true,
-                excludeEnd: true),
+            Mode(begin: "\"", end: "\"", contains: [Mode(ref: '~contains~3')]),
             Mode(begin: "'", end: "'", contains: [Mode(ref: '~contains~3')]),
             Mode(begin: "[^\\s\"'=<>`]+")
           ])

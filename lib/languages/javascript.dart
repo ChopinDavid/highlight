@@ -153,7 +153,7 @@ final javascript = Mode(refs: {
                     ])
               ])
             ]),
-        Mode(className: "", begin: "\\s", end: "\\s*", skip: true),
+        Mode(className: "js-", begin: "\\s", end: "\\s*", skip: true),
         Mode(variants: [
           Mode(begin: "<>", end: "</>"),
           Mode(
