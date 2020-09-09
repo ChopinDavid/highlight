@@ -30,10 +30,10 @@ final javascript = Mode(refs: {
       ])),
   '~contains~4~starts~contains~1':
       Mode(className: "js-subst", begin: "\\\$\\{", end: "\\}", keywords: {
-    "keyword":
+    "js-keyword":
         "in of if for while finally var new function do return void else break catch instanceof with throw case default try this switch continue typeof delete let yield const export super debugger as async await static import from as",
-    "literal": "true false null undefined NaN Infinity",
-    "built_in":
+    "js-literal": "true false null undefined NaN Infinity",
+    "js-built_in":
         "eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent encodeURI encodeURIComponent escape unescape Object Function Boolean Error EvalError InternalError RangeError ReferenceError StopIteration SyntaxError TypeError URIError Number Math Date String RegExp Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect Promise"
   }, contains: [
     APOS_STRING_MODE,
@@ -59,10 +59,10 @@ final javascript = Mode(refs: {
   "mjs",
   "cjs"
 ], keywords: {
-  "keyword":
+  "js-keyword":
       "in of if for while finally var new function do return void else break catch instanceof with throw case default try this switch continue typeof delete let yield const export super debugger as async await static import from as",
-  "literal": "true false null undefined NaN Infinity",
-  "built_in":
+  "js-literal": "true false null undefined NaN Infinity",
+  "js-built_in":
       "eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent encodeURI encodeURIComponent escape unescape Object Function Boolean Error EvalError InternalError RangeError ReferenceError StopIteration SyntaxError TypeError URIError Number Math Date String RegExp Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect Promise"
 }, contains: [
   Mode(
@@ -134,10 +134,10 @@ final javascript = Mode(refs: {
                     excludeBegin: true,
                     excludeEnd: true,
                     keywords: {
-                      "keyword":
+                      "js-keyword":
                           "in of if for while finally var new function do return void else break catch instanceof with throw case default try this switch continue typeof delete let yield const export super debugger as async await static import from as",
-                      "literal": "true false null undefined NaN Infinity",
-                      "built_in":
+                      "js-literal": "true false null undefined NaN Infinity",
+                      "js-built_in":
                           "eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent encodeURI encodeURIComponent escape unescape Object Function Boolean Error EvalError InternalError RangeError ReferenceError StopIteration SyntaxError TypeError URIError Number Math Date String RegExp Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect Promise"
                     },
                     contains: [
